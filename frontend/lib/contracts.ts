@@ -1,30 +1,20 @@
 import { openContractCall } from "@stacks/connect";
-import {
-  callReadOnlyFunction,
-  uintCV,
-  cvToJSON,
-  principalCV,
-  ClarityValue,
-} from "@stacks/transactions";
-import { NETWORK, CONTRACT_ADDRESS, CONTRACT_NAME } from "./stacks";
+import { uintCV } from "@stacks/transactions";
+import { VoteBattleClient } from "vote-battle-sdk";
+import { CONTRACT_ADDRESS, CONTRACT_NAME, NETWORK } from "./stacks";
 
-export interface PollResults {
-  pollId: number;
-  optionA: number;
-  optionB: number;
-}
+export type { PollResults, VoterStats } from "vote-battle-sdk";
 
-export interface VoterStats {
-  totalVotes: number;
-}
+const client = new VoteBattleClient({
+  contractAddress: CONTRACT_ADDRESS,
+  contractName: CONTRACT_NAME,
+});
 
 export async function vote(pollId: number, option: number): Promise<void> {
+  const args = client.getVoteArgs(pollId, option as 1 | 2);
   await openContractCall({
     network: NETWORK,
-    contractAddress: CONTRACT_ADDRESS,
-    contractName: CONTRACT_NAME,
-    functionName: "vote",
-    functionArgs: [uintCV(pollId), uintCV(option)],
+    ...args,
     onFinish: (data) => {
       console.log("Vote tx:", data.txId);
     },
@@ -34,66 +24,11 @@ export async function vote(pollId: number, option: number): Promise<void> {
   });
 }
 
-export async function getPollResults(
-  pollId: number
-): Promise<PollResults | null> {
-  try {
-    const result = await callReadOnlyFunction({
-      network: NETWORK,
-      contractAddress: CONTRACT_ADDRESS,
-      contractName: CONTRACT_NAME,
-      functionName: "get-poll-results",
-      functionArgs: [uintCV(pollId)],
-      senderAddress: CONTRACT_ADDRESS,
-    });
+export const getPollResults = (pollId: number) => client.getPollResults(pollId);
 
-    const json = cvToJSON(result);
-    if (json.success && json.value) {
-      const val = json.value.value;
-      return {
-        pollId,
-        optionA: parseInt(val["option-a"].value),
-        optionB: parseInt(val["option-b"].value),
-      };
-    }
-    return { pollId, optionA: 0, optionB: 0 };
-  } catch {
-    return { pollId, optionA: 0, optionB: 0 };
-  }
-}
+export const getVoterStats = (address: string) => client.getVoterStats(address);
 
-export async function getVoterStats(
-  address: string
-): Promise<VoterStats | null> {
-  try {
-    const result = await callReadOnlyFunction({
-      network: NETWORK,
-      contractAddress: CONTRACT_ADDRESS,
-      contractName: CONTRACT_NAME,
-      functionName: "get-voter-stats",
-      functionArgs: [principalCV(address)],
-      senderAddress: CONTRACT_ADDRESS,
-    });
-
-    const json = cvToJSON(result);
-    if (json.success && json.value) {
-      return {
-        totalVotes: parseInt(json.value.value["total-votes"].value),
-      };
-    }
-    return { totalVotes: 0 };
-  } catch {
-    return { totalVotes: 0 };
-  }
-}
-
-export async function getAllPollResults(): Promise<PollResults[]> {
-  const promises = Array.from({ length: 20 }, (_, i) =>
-    getPollResults(i + 1)
-  );
-  const results = await Promise.all(promises);
-  return results.filter((r): r is PollResults => r !== null);
-}
+export const getAllPollResults = () => client.getAllPollResults();
 
 export async function getTopVoters(): Promise<
   { address: string; votes: number }[]
