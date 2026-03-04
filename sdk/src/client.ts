@@ -44,12 +44,13 @@ export class VoteBattleClient {
       });
 
       const json = cvToJSON(result);
-      if (json.success && json.value) {
-        const val = json.value.value;
-        const optionA = parseInt(val["option-a"].value);
-        const optionB = parseInt(val["option-b"].value);
-        return { pollId, optionA, optionB, total: optionA + optionB };
-      }
+      // Response is a direct tuple { option-a: uint, option-b: uint }, not wrapped in (ok ...)
+      const val = json.value || json;
+      const a = val["option-a"];
+      const b = val["option-b"];
+      const optionA = parseInt(a?.value ?? a ?? "0");
+      const optionB = parseInt(b?.value ?? b ?? "0");
+      return { pollId, optionA, optionB, total: optionA + optionB };
     } catch {
       // Fall through to default
     }
@@ -82,11 +83,9 @@ export class VoteBattleClient {
       });
 
       const json = cvToJSON(result);
-      if (json.success && json.value) {
-        return {
-          totalVotes: parseInt(json.value.value["total-votes"].value),
-        };
-      }
+      // Response is a direct uint, not wrapped in (ok ...)
+      const totalVotes = parseInt(json.value ?? json ?? "0");
+      return { totalVotes };
     } catch {
       // Fall through to default
     }
@@ -116,14 +115,9 @@ export class VoteBattleClient {
       });
 
       const json = cvToJSON(result);
-      if (json.success && json.value) {
-        const val = json.value.value;
-        return {
-          pollId,
-          votesA: parseInt(val["votes-a"].value),
-          votesB: parseInt(val["votes-b"].value),
-        };
-      }
+      // Response is a direct uint (total votes in this poll)
+      const votes = parseInt(json.value ?? json ?? "0");
+      return { pollId, votesA: votes, votesB: 0 };
     } catch {
       // Fall through to default
     }
