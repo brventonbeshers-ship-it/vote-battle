@@ -19,3 +19,9 @@ export function formatNumber(n: number): string {
   if (n >= 1_000)     return (n / 1_000).toFixed(1) + 'K';
   return n.toLocaleString();
 }
+
+
+export function calcVotePercent(votes: number, total: number): number {
+  if (total === 0) return 0;
+  return Math.round((votes / total) * 100);
+}
