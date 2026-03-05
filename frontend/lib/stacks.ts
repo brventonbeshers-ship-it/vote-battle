@@ -30,3 +30,15 @@ export function calcVotePercent(votes: number, total: number): number {
 export function pluralize(n: number, word: string, plural?: string): string {
   return `${n} ${n === 1 ? word : (plural ?? word + 's')}`;
 }
+
+
+export function timeAgo(date: Date): string {
+  const diff = Date.now() - date.getTime();
+  const mins  = Math.floor(diff / 60000);
+  const hours = Math.floor(diff / 3600000);
+  const days  = Math.floor(diff / 86400000);
+  if (days  > 0) return `${days}d ago`;
+  if (hours > 0) return `${hours}h ago`;
+  if (mins  > 0) return `${mins}m ago`;
+  return 'just now';
+}
