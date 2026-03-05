@@ -42,3 +42,8 @@ export function timeAgo(date: Date): string {
   if (mins  > 0) return `${mins}m ago`;
   return 'just now';
 }
+
+
+export function formatSTX(microStx: number): string {
+  return (microStx / 1_000_000).toFixed(2) + ' STX';
+}
