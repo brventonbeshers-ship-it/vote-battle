@@ -4,7 +4,9 @@
   "description": "TypeScript SDK for interacting with the Vote Battle smart contract on Stacks blockchain",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "npm run build"
@@ -16,7 +18,11 @@
     "clarity",
     "smart-contract",
     "sdk",
-    "web3"
+    "web3",
+    "nft",
+    "dapp",
+    "stacks-blockchain",
+    "web3-sdk"
   ],
   "author": "brventonbeshers-ship-it",
   "license": "MIT",
