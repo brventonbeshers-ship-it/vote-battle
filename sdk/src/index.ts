@@ -7,3 +7,7 @@ export {
   VoteBattleConfig,
   POLLS,
 } from "./types";
+
+
+export type VoteResult = Awaited<ReturnType<VoteBattleClient['getVote']>>;
+
