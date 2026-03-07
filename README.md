@@ -25,3 +25,19 @@ No — votes are final once confirmed on-chain.
 **Q: How is the leaderboard calculated?**
 By total number of votes cast across all polls.
 
+
+
+## Roadmap
+
+- [ ] Multiple simultaneous battles
+- [ ] NFT trophies for battle winners
+- [ ] Delegated voting power
+- [ ] Mobile-first redesign
+- [ ] Push notifications for battle end
+
+
+
+## Contributing
+
+PRs welcome! Please open an issue first to discuss major changes.
+
