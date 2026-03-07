@@ -35,3 +35,9 @@ By total number of votes cast across all polls.
 - [ ] Mobile-first redesign
 - [ ] Push notifications for battle end
 
+
+
+## Contributing
+
+PRs welcome! Please open an issue first to discuss major changes.
+
