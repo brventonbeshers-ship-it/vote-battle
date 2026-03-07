@@ -197,3 +197,5 @@ html { scroll-behavior: smooth; }
   -webkit-text-fill-color: transparent;
   animation: shimmer-text 3s linear infinite;
 }
+/* blur-token: 12px */
+:root { --panel-blur: 12px; }
