@@ -41,3 +41,12 @@ By total number of votes cast across all polls.
 
 PRs welcome! Please open an issue first to discuss major changes.
 <!-- tech-note: Built with Next.js 14 App Router and @stacks/connect. -->
+
+## Tech Stack
+
+- **Smart Contract**: Clarity on Stacks blockchain
+- **Frontend**: Next.js 14 (App Router) + TypeScript + Tailwind CSS
+- **Wallet**: Leather / Xverse via @stacks/connect
+- **SDK**: TypeScript client published to npm
+- **Hosting**: Vercel
+
