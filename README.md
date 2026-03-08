@@ -50,3 +50,12 @@ PRs welcome! Please open an issue first to discuss major changes.
 - **SDK**: TypeScript client published to npm
 - **Hosting**: Vercel
 
+
+
+## Security
+
+- Smart contract is open-source and fully auditable
+- No admin keys — contract is immutable post-deploy
+- Votes are finalized on-chain; no off-chain oracle required
+- Report issues via GitHub Issues
+
