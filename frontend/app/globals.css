@@ -206,3 +206,18 @@ html { scroll-behavior: smooth; }
   to   { opacity: 1; transform: translateY(0); }
 }
 .animate-fade-up { animation: fade-up 0.4s ease-out both; }
+
+/* ─── Gradient border ─── */
+.gradient-border {
+  position: relative;
+  border-radius: 1rem;
+  background: #0f0f1a;
+}
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(168,85,247,0.6), rgba(236,72,153,0.6));
+  z-index: -1;
+}
