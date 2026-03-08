@@ -33,3 +33,5 @@ export function truncateText(text: string, maxLength: number, suffix = '...'): s
   if (text.length <= maxLength) return text;
   return text.slice(0, maxLength - suffix.length) + suffix;
 }
+
+export const clamp = (n: number, min: number, max: number): number => Math.min(max, Math.max(min, n));

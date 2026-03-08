@@ -1,3 +1,5 @@
+![npm](https://img.shields.io/npm/v/vote-battle-sdk?color=blueviolet) ![license](https://img.shields.io/badge/license-MIT-blue)
+
 
 
 ## Contract Details
@@ -39,8 +41,7 @@ By total number of votes cast across all polls.
 
 ## Contributing
 
-PRs welcome! Please open an issue first to discuss major changes.
-<!-- tech-note: Built with Next.js 14 App Router and @stacks/connect. -->
+PRs welcome! Please open an issue first to discuss major changes.
 
 ## Tech Stack
 
@@ -58,4 +59,21 @@ PRs welcome! Please open an issue first to discuss major changes.
 - No admin keys — contract is immutable post-deploy
 - Votes are finalized on-chain; no off-chain oracle required
 - Report issues via GitHub Issues
+<!-- tech-note: Frontend deployed on Vercel with automatic CI/CD. -->
+
+## License
+
+MIT © brventonbeshers
+
+
+
+## Deployment
+
+The frontend is deployed on Vercel. Set the following environment variables:
+
+```
+NEXT_PUBLIC_CONTRACT_ADDRESS=SP1Q7YR67R6WGP28NXDJD1WZ11REPAAXRJJ3V6RKM
+NEXT_PUBLIC_CONTRACT_NAME=vote-dapp-stacks
+NEXT_PUBLIC_NETWORK=mainnet
+```
 
