@@ -65,3 +65,15 @@ PRs welcome! Please open an issue first to discuss major changes.
 
 MIT © brventonbeshers
 
+
+
+## Deployment
+
+The frontend is deployed on Vercel. Set the following environment variables:
+
+```
+NEXT_PUBLIC_CONTRACT_ADDRESS=SP1Q7YR67R6WGP28NXDJD1WZ11REPAAXRJJ3V6RKM
+NEXT_PUBLIC_CONTRACT_NAME=vote-dapp-stacks
+NEXT_PUBLIC_NETWORK=mainnet
+```
+
