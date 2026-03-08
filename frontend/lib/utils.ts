@@ -18,3 +18,8 @@ export const randomBetween = (min: number, max: number): number => Math.floor(Ma
 export function unique<T>(arr: T[]): T[] { return [...new Set(arr)]; }
 
 export const sleep = (ms: number) => new Promise<void>(resolve => setTimeout(resolve, ms));
+
+export function memoize<T>(fn: (key: string) => T): (key: string) => T {
+  const cache = new Map<string, T>();
+  return (key: string) => { if (!cache.has(key)) cache.set(key, fn(key)); return cache.get(key)!; };
+}
