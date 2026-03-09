@@ -77,3 +77,12 @@ NEXT_PUBLIC_CONTRACT_NAME=vote-dapp-stacks
 NEXT_PUBLIC_NETWORK=mainnet
 ```
 
+
+
+## Security
+
+- Smart contract is open-source and fully auditable
+- No admin keys — contract is immutable post-deploy
+- Votes are finalized on-chain; no off-chain oracle required
+- Report issues via GitHub Issues
+
