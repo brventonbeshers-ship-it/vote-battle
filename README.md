@@ -94,3 +94,13 @@ NEXT_PUBLIC_NETWORK=mainnet
 - **SDK**: TypeScript client published to npm
 - **Hosting**: Vercel
 
+
+
+## Roadmap
+
+- [ ] Multiple simultaneous battles
+- [ ] NFT trophies for battle winners
+- [ ] Delegated voting power
+- [ ] Mobile-first redesign
+- [ ] Push notifications for battle end
+
