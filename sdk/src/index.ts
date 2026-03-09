@@ -1,4 +1,4 @@
-// sdk-rev: 2
+// sdk-rev: 3
 import type { VoteBattleClient } from "./client";
 export { VoteBattleClient } from "./client";
 export {
@@ -11,3 +11,7 @@ export {
 } from "./types";
 
 export type VoteResult = Awaited<ReturnType<VoteBattleClient['getPollResults']>>;
+
+
+export type VoterInfo = Awaited<ReturnType<VoteBattleClient['getVoterStats']>>;
+
