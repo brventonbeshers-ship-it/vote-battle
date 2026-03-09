@@ -59,7 +59,6 @@ PRs welcome! Please open an issue first to discuss major changes.
 - No admin keys — contract is immutable post-deploy
 - Votes are finalized on-chain; no off-chain oracle required
 - Report issues via GitHub Issues
-<!-- tech-note: Frontend deployed on Vercel with automatic CI/CD. -->
 
 ## License
 
@@ -85,4 +84,4 @@ NEXT_PUBLIC_NETWORK=mainnet
 - No admin keys — contract is immutable post-deploy
 - Votes are finalized on-chain; no off-chain oracle required
 - Report issues via GitHub Issues
-
+<!-- tech-note: Built with Next.js 14 App Router and @stacks/connect. -->
