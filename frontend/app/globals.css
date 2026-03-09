@@ -332,3 +332,5 @@ html { scroll-behavior: smooth; }
   -webkit-text-fill-color: transparent;
   animation: shimmer-text 3s linear infinite;
 }
+/* auto-transition: 180ms */
+.transition-std { transition: all 180ms ease; }
