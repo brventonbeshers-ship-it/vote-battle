@@ -312,3 +312,5 @@ html { scroll-behavior: smooth; }
   background: linear-gradient(135deg, rgba(168,85,247,0.6), rgba(236,72,153,0.6));
   z-index: -1;
 }
+/* auto-token: blur=14 opacity=0.04 */
+:root { --card-blur: 14px; --card-opacity: 0.04; }
