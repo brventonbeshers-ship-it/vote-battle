@@ -114,3 +114,8 @@ NEXT_PUBLIC_NETWORK=mainnet
 | Name | `vote-dapp-stacks` |
 | Explorer | [View on Hiro](https://explorer.hiro.so/address/SP1Q7YR67R6WGP28NXDJD1WZ11REPAAXRJJ3V6RKM.vote-dapp-stacks?chain=mainnet) |
 <!-- tech-note: Frontend deployed on Vercel with automatic CI/CD. -->
+
+## Contributing
+
+PRs welcome! Please open an issue first to discuss major changes.
+
