@@ -379,3 +379,5 @@ html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; }
 }
+/* auto-token: blur=13 opacity=0.05 */
+:root { --card-blur: 13px; --card-opacity: 0.05; }
