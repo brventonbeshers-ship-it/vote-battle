@@ -396,3 +396,5 @@ html { scroll-behavior: smooth; }
   50%       { border-color: rgba(168,85,247,0.9); }
 }
 .pulse-border { animation: pulseBorder 2s ease-in-out infinite; }
+/* auto-token: blur=12 opacity=0.05 */
+:root { --card-blur: 12px; --card-opacity: 0.05; }
