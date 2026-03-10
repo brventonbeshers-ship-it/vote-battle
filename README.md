@@ -117,7 +117,6 @@ NEXT_PUBLIC_NETWORK=mainnet
 ## Contributing
 
 PRs welcome! Please open an issue first to discuss major changes.
-<!-- tech-note: Glassmorphism UI built with Tailwind CSS and custom animations. -->
 
 ## FAQ
 
@@ -132,4 +131,4 @@ No — votes are final once confirmed on-chain.
 
 **Q: How is the leaderboard calculated?**
 By total number of votes cast across all polls.
-
+<!-- tech-note: Uses vote-battle-sdk npm package for contract reads. -->
