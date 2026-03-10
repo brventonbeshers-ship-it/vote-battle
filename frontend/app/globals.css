@@ -373,3 +373,9 @@ html { scroll-behavior: smooth; }
 :root { --card-blur: 13px; --card-opacity: 0.08; }
 /* auto-transition: 150ms */
 .transition-std { transition: all 150ms ease; }
+
+/* ─── Smooth scroll & motion ─── */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; }
+}
