@@ -34,7 +34,7 @@ export default function Home() {
             </span>
           </h2>
           <p className="text-lg text-gray-400 drop-shadow-lg">
-            20 battles. Your vote. On-chain forever.
+            20 matchups. Pick a side. Permanent on-chain results.
           </p>
         </div>
         <SearchBar value={search} onChange={setSearch} />
