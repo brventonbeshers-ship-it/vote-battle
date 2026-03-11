@@ -482,3 +482,34 @@ html { scroll-behavior: smooth; }
 }
 /* auto-token: blur=12 opacity=0.04 */
 :root { --card-blur: 12px; --card-opacity: 0.04; }
+
+/* ─── Fade up ─── */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up { animation: fade-up 0.4s ease-out both; }
+
+/* ─── Focus ring ─── */
+*:focus-visible {
+  outline: 2px solid rgba(168, 85, 247, 0.7);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+/* auto-transition: 180ms */
+.transition-std { transition: all 180ms ease; }
+/* auto-token: blur=11 opacity=0.08 */
+:root { --card-blur: 11px; --card-opacity: 0.08; }
+
+/* ─── Shimmer text ─── */
+@keyframes shimmer-text {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.shimmer-text {
+  background: linear-gradient(90deg, #a855f7 0%, #ec4899 50%, #a855f7 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer-text 3s linear infinite;
+}
