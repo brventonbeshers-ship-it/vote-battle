@@ -66,7 +66,7 @@ body::before {
   transition: all 0.2s ease;
 }
 .lb-row:hover {
-  background: rgba(108, 92, 231, 0.1);
+  background: rgba(108, 92, 231, 0.15);
   transform: translateX(4px);
 }
 
@@ -571,4 +571,30 @@ html { scroll-behavior: smooth; }
 ::selection {
   background: rgba(168, 85, 247, 0.3);
   color: #f5f3ff;
+}
+
+/* ─── Skeleton ─── */
+@keyframes skeleton-wave {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.skeleton {
+  background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%);
+  background-size: 800px 100%;
+  animation: skeleton-wave 1.5s infinite;
+}
+
+/* ─── Glow text ─── */
+.text-glow-purple {
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+}
+.text-glow-pink {
+  text-shadow: 0 0 20px rgba(236, 72, 153, 0.5);
+}
+
+/* ─── Focus ring ─── */
+*:focus-visible {
+  outline: 2px solid rgba(168, 85, 247, 0.7);
+  outline-offset: 2px;
+  border-radius: 6px;
 }
