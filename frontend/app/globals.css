@@ -480,3 +480,5 @@ html { scroll-behavior: smooth; }
   background-size: 800px 100%;
   animation: skeleton-wave 1.5s infinite;
 }
+/* auto-token: blur=12 opacity=0.04 */
+:root { --card-blur: 12px; --card-opacity: 0.04; }
