@@ -469,3 +469,16 @@ html { scroll-behavior: smooth; }
   border: 1px solid rgba(168, 85, 247, 0.15);
   border-radius: 1rem;
 }
+
+/* ─── Skeleton ─── */
+@keyframes skeleton-wave {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.skeleton {
+  background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%);
+  background-size: 800px 100%;
+  animation: skeleton-wave 1.5s infinite;
+}
+/* auto-token: blur=12 opacity=0.04 */
+:root { --card-blur: 12px; --card-opacity: 0.04; }
