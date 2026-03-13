@@ -10,7 +10,7 @@ const V = {
 };
 export default function Badge({ label, variant = 'purple' }: Props) {
   return (
-    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-semibold border ${V[variant]}`}>
+    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-xl text-xs font-semibold border ${V[variant]}`}>
       {label}
     </span>
   );
