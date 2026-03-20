@@ -23,7 +23,7 @@ export default function SearchBar({ value, onChange }: SearchBarProps) {
       </svg>
       <input
         type="text"
-        placeholder="Type to filter polls..."
+        placeholder="Search battles by topic..."
         value={value}
         onChange={(e) => onChange(e.target.value)}
         className="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-white/5 backdrop-blur-sm border border-primary/15 text-white placeholder-gray-500 focus:outline-none focus:border-primary/50 focus:shadow-glow-sm focus:bg-white/8 transition-all duration-300"

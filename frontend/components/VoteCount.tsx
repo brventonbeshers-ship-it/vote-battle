@@ -2,7 +2,7 @@ import React from 'react';
 
 interface VoteCountProps { votes: number; label?: string }
 
-export default function VoteCount({ votes, label = 'votes' }: VoteCountProps) {
+export default function VoteCount({ votes, label = 'cast' }: VoteCountProps) {
   return (
     <div className="flex items-baseline gap-1">
       <span className="text-2xl font-bold text-white">{votes.toLocaleString()}</span>

@@ -10,7 +10,7 @@ export default function CopyButton({ text, className = '' }: { text: string; cla
   };
   return (
     <button onClick={copy} className={`text-xs px-2 py-1 rounded bg-purple-500/20 hover:bg-purple-500/30 transition ${className}`}>
-      {copied ? '✓ Copied' : 'Copy'}
+      {copied ? '✓ Copied' : 'Clipboard'}
     </button>
   );
 }
