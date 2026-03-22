@@ -7,6 +7,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      zIndex: { 60: '60', 70: '70', 80: '80' },
       transitionDuration: { 400: '400ms', 600: '600ms' },
       screens: { xs: '480px' },
       zIndex: { 60: '60', 70: '70', 80: '80' },
