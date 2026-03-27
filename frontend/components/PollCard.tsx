@@ -63,7 +63,7 @@ export default function PollCard({ poll }: PollCardProps) {
         </h3>
 
         {/* Progress bar */}
-        <div className="relative h-2 rounded-full bg-white/5 mb-2 overflow-hidden border border-white/5">
+        <div className="relative h-2.5 rounded-full bg-white/5 mb-2 overflow-hidden border border-white/5">
           <div
             className="absolute inset-y-0 left-0 rounded-full transition-all duration-700 ease-out progress-shimmer"
             style={{
