@@ -84,7 +84,7 @@ export default function LeaderboardModal({
               {/* Top Polls */}
               <div>
                 <h3 className="text-sm font-bold text-primary mb-3 uppercase tracking-wider drop-shadow-md">
-                  Popular Polls
+                  Most Voted Polls
                 </h3>
                 <div className="space-y-1.5">
                   {sortedPolls.slice(0, 10).map((poll, i) => (
@@ -109,7 +109,7 @@ export default function LeaderboardModal({
                 </div>
               </div>
 
-              {/* Voter Rankings */}
+              {/* Leading Voters */}
               <div>
                 <h3 className="text-sm font-bold text-accent mb-3 uppercase tracking-wider drop-shadow-md">
                   Voter Rankings
