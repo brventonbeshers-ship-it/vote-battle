@@ -11,7 +11,7 @@ export default function PollGrid({ polls }: PollGridProps) {
   if (polls.length === 0) {
     return (
       <div className="text-center py-20 text-gray-500">
-        Nothing found. Try another keyword.
+        No matching polls found.
       </div>
     );
   }
